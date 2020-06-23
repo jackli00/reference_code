@@ -223,7 +223,7 @@ class Advertiser(object):
         elif value < MAJOR_LIMITS[0] or value > MAJOR_LIMITS[1]:
             raise ValueError("Beacon advertiser major value must be in range "
                     f"{MAJOR_LIMITS}.")
-        self.__major = valued
+        self.__major = value
             
     @property
     def minor(self):
