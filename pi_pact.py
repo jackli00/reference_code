@@ -568,7 +568,10 @@ class Scanner(object):
             self.__logger.debug(f"Performing scan #{scan_count} at revisit "
                     f"{self.revisit}.")
             timestamps.append(datetime.now())
+
             scans.append(self.__service.scan(self.revisit))
+            print(scans[-1])
+
             # Stop advertising based on either timeout or control file
             if timeout is not None:
                 if (time.monotonic()-start_time) > timeout:
